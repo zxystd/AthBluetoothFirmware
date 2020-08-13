@@ -1,0 +1,596 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F83335B624E42786002A0A08 /* Ath3kBT.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F83335B524E42786002A0A08 /* Ath3kBT.hpp */; };
+		F83335B824E42786002A0A08 /* Ath3kBT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F83335B724E42786002A0A08 /* Ath3kBT.cpp */; };
+		F83335D524E428C1002A0A08 /* LinuxTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = F83335D424E428C1002A0A08 /* LinuxTypes.h */; };
+		F83335D724E429F3002A0A08 /* FwData.h in Headers */ = {isa = PBXBuildFile; fileRef = F83335D624E429F3002A0A08 /* FwData.h */; };
+		F83335DA24E42C42002A0A08 /* AtherosFWService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F83335D824E42C42002A0A08 /* AtherosFWService.cpp */; };
+		F83335DB24E42C42002A0A08 /* AtherosFWService.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F83335D924E42C42002A0A08 /* AtherosFWService.hpp */; };
+		F83335F124E4375B002A0A08 /* FwBinary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F83335EF24E43745002A0A08 /* FwBinary.cpp */; };
+		F83335FA24E43F90002A0A08 /* Ath3kBTInjector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F83335F924E43F90002A0A08 /* Ath3kBTInjector.hpp */; };
+		F83335FC24E43F90002A0A08 /* Ath3kBTInjector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F83335FB24E43F90002A0A08 /* Ath3kBTInjector.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F83335E324E43221002A0A08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F833359424E42617002A0A08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F83335DF24E43208002A0A08;
+			remoteInfo = ath3kfwgen;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F83335B324E42786002A0A08 /* Ath3kBT.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Ath3kBT.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		F83335B524E42786002A0A08 /* Ath3kBT.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Ath3kBT.hpp; sourceTree = "<group>"; };
+		F83335B724E42786002A0A08 /* Ath3kBT.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Ath3kBT.cpp; sourceTree = "<group>"; };
+		F83335B924E42786002A0A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F83335BD24E427FE002A0A08 /* HCITool.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HCITool.cpp; sourceTree = "<group>"; };
+		F83335BE24E427FE002A0A08 /* HCITool.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HCITool.hpp; sourceTree = "<group>"; };
+		F83335C224E42849002A0A08 /* AthrBT_0x01020200.dfu */ = {isa = PBXFileReference; lastKnownFileType = file; path = AthrBT_0x01020200.dfu; sourceTree = "<group>"; };
+		F83335C324E42849002A0A08 /* ramps_0x31010000_40.dfu */ = {isa = PBXFileReference; lastKnownFileType = file; path = ramps_0x31010000_40.dfu; sourceTree = "<group>"; };
+		F83335C424E42849002A0A08 /* ramps_0x01020201_40.dfu */ = {isa = PBXFileReference; lastKnownFileType = file; path = ramps_0x01020201_40.dfu; sourceTree = "<group>"; };
+		F83335C524E42849002A0A08 /* ramps_0x01020001_26.dfu */ = {isa = PBXFileReference; lastKnownFileType = file; path = ramps_0x01020001_26.dfu; sourceTree = "<group>"; };
+		F83335C624E42849002A0A08 /* AthrBT_0x31010000.dfu */ = {isa = PBXFileReference; lastKnownFileType = file; path = AthrBT_0x31010000.dfu; sourceTree = "<group>"; };
+		F83335C724E42849002A0A08 /* ramps_0x01020201_26.dfu */ = {isa = PBXFileReference; lastKnownFileType = file; path = ramps_0x01020201_26.dfu; sourceTree = "<group>"; };
+		F83335C824E42849002A0A08 /* ramps_0x11020100_40.dfu */ = {isa = PBXFileReference; lastKnownFileType = file; path = ramps_0x11020100_40.dfu; sourceTree = "<group>"; };
+		F83335C924E42849002A0A08 /* ramps_0x01020200_26.dfu */ = {isa = PBXFileReference; lastKnownFileType = file; path = ramps_0x01020200_26.dfu; sourceTree = "<group>"; };
+		F83335CA24E42849002A0A08 /* AthrBT_0x11020100.dfu */ = {isa = PBXFileReference; lastKnownFileType = file; path = AthrBT_0x11020100.dfu; sourceTree = "<group>"; };
+		F83335CB24E4284A002A0A08 /* AthrBT_0x31010100.dfu */ = {isa = PBXFileReference; lastKnownFileType = file; path = AthrBT_0x31010100.dfu; sourceTree = "<group>"; };
+		F83335CC24E4284A002A0A08 /* ramps_0x11020000_40.dfu */ = {isa = PBXFileReference; lastKnownFileType = file; path = ramps_0x11020000_40.dfu; sourceTree = "<group>"; };
+		F83335CD24E4284A002A0A08 /* ramps_0x41020000_40.dfu */ = {isa = PBXFileReference; lastKnownFileType = file; path = ramps_0x41020000_40.dfu; sourceTree = "<group>"; };
+		F83335CE24E4284A002A0A08 /* AthrBT_0x01020001.dfu */ = {isa = PBXFileReference; lastKnownFileType = file; path = AthrBT_0x01020001.dfu; sourceTree = "<group>"; };
+		F83335CF24E4284A002A0A08 /* AthrBT_0x01020201.dfu */ = {isa = PBXFileReference; lastKnownFileType = file; path = AthrBT_0x01020201.dfu; sourceTree = "<group>"; };
+		F83335D024E4284A002A0A08 /* AthrBT_0x41020000.dfu */ = {isa = PBXFileReference; lastKnownFileType = file; path = AthrBT_0x41020000.dfu; sourceTree = "<group>"; };
+		F83335D124E4284A002A0A08 /* ramps_0x31010100_40.dfu */ = {isa = PBXFileReference; lastKnownFileType = file; path = ramps_0x31010100_40.dfu; sourceTree = "<group>"; };
+		F83335D224E4284A002A0A08 /* AthrBT_0x11020000.dfu */ = {isa = PBXFileReference; lastKnownFileType = file; path = AthrBT_0x11020000.dfu; sourceTree = "<group>"; };
+		F83335D324E4284A002A0A08 /* ramps_0x01020200_40.dfu */ = {isa = PBXFileReference; lastKnownFileType = file; path = ramps_0x01020200_40.dfu; sourceTree = "<group>"; };
+		F83335D424E428C1002A0A08 /* LinuxTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinuxTypes.h; sourceTree = "<group>"; };
+		F83335D624E429F3002A0A08 /* FwData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FwData.h; sourceTree = "<group>"; };
+		F83335D824E42C42002A0A08 /* AtherosFWService.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AtherosFWService.cpp; sourceTree = "<group>"; };
+		F83335D924E42C42002A0A08 /* AtherosFWService.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AtherosFWService.hpp; sourceTree = "<group>"; };
+		F83335DE24E431A4002A0A08 /* fw_gen.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = fw_gen.sh; sourceTree = "<group>"; };
+		F83335EF24E43745002A0A08 /* FwBinary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FwBinary.cpp; sourceTree = "<group>"; };
+		F83335F724E43F90002A0A08 /* Ath3kBTInjector.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Ath3kBTInjector.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		F83335F924E43F90002A0A08 /* Ath3kBTInjector.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Ath3kBTInjector.hpp; sourceTree = "<group>"; };
+		F83335FB24E43F90002A0A08 /* Ath3kBTInjector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Ath3kBTInjector.cpp; sourceTree = "<group>"; };
+		F83335FD24E43F90002A0A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F83335B024E42786002A0A08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F83335F424E43F90002A0A08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F833359324E42617002A0A08 = {
+			isa = PBXGroup;
+			children = (
+				F833359F24E42617002A0A08 /* AthBluetoothFirmware */,
+				F83335B424E42786002A0A08 /* Ath3kBT */,
+				F83335F824E43F90002A0A08 /* Ath3kBTInjector */,
+				F833359E24E42617002A0A08 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F833359E24E42617002A0A08 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F83335B324E42786002A0A08 /* Ath3kBT.kext */,
+				F83335F724E43F90002A0A08 /* Ath3kBTInjector.kext */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F833359F24E42617002A0A08 /* AthBluetoothFirmware */ = {
+			isa = PBXGroup;
+			children = (
+				F83335EF24E43745002A0A08 /* FwBinary.cpp */,
+				F83335DE24E431A4002A0A08 /* fw_gen.sh */,
+				F83335DC24E43163002A0A08 /* util */,
+				F83335D624E429F3002A0A08 /* FwData.h */,
+				F83335D824E42C42002A0A08 /* AtherosFWService.cpp */,
+				F83335D924E42C42002A0A08 /* AtherosFWService.hpp */,
+			);
+			path = AthBluetoothFirmware;
+			sourceTree = "<group>";
+		};
+		F83335B424E42786002A0A08 /* Ath3kBT */ = {
+			isa = PBXGroup;
+			children = (
+				F83335E724E433FD002A0A08 /* fw */,
+				F83335B524E42786002A0A08 /* Ath3kBT.hpp */,
+				F83335B724E42786002A0A08 /* Ath3kBT.cpp */,
+				F83335B924E42786002A0A08 /* Info.plist */,
+			);
+			path = Ath3kBT;
+			sourceTree = "<group>";
+		};
+		F83335DC24E43163002A0A08 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				F83335D424E428C1002A0A08 /* LinuxTypes.h */,
+				F83335BD24E427FE002A0A08 /* HCITool.cpp */,
+				F83335BE24E427FE002A0A08 /* HCITool.hpp */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
+		F83335E724E433FD002A0A08 /* fw */ = {
+			isa = PBXGroup;
+			children = (
+				F83335CE24E4284A002A0A08 /* AthrBT_0x01020001.dfu */,
+				F83335C224E42849002A0A08 /* AthrBT_0x01020200.dfu */,
+				F83335CF24E4284A002A0A08 /* AthrBT_0x01020201.dfu */,
+				F83335D224E4284A002A0A08 /* AthrBT_0x11020000.dfu */,
+				F83335CA24E42849002A0A08 /* AthrBT_0x11020100.dfu */,
+				F83335C624E42849002A0A08 /* AthrBT_0x31010000.dfu */,
+				F83335CB24E4284A002A0A08 /* AthrBT_0x31010100.dfu */,
+				F83335D024E4284A002A0A08 /* AthrBT_0x41020000.dfu */,
+				F83335C524E42849002A0A08 /* ramps_0x01020001_26.dfu */,
+				F83335C924E42849002A0A08 /* ramps_0x01020200_26.dfu */,
+				F83335D324E4284A002A0A08 /* ramps_0x01020200_40.dfu */,
+				F83335C724E42849002A0A08 /* ramps_0x01020201_26.dfu */,
+				F83335C424E42849002A0A08 /* ramps_0x01020201_40.dfu */,
+				F83335CC24E4284A002A0A08 /* ramps_0x11020000_40.dfu */,
+				F83335C824E42849002A0A08 /* ramps_0x11020100_40.dfu */,
+				F83335C324E42849002A0A08 /* ramps_0x31010000_40.dfu */,
+				F83335D124E4284A002A0A08 /* ramps_0x31010100_40.dfu */,
+				F83335CD24E4284A002A0A08 /* ramps_0x41020000_40.dfu */,
+			);
+			path = fw;
+			sourceTree = "<group>";
+		};
+		F83335F824E43F90002A0A08 /* Ath3kBTInjector */ = {
+			isa = PBXGroup;
+			children = (
+				F83335F924E43F90002A0A08 /* Ath3kBTInjector.hpp */,
+				F83335FB24E43F90002A0A08 /* Ath3kBTInjector.cpp */,
+				F83335FD24E43F90002A0A08 /* Info.plist */,
+			);
+			path = Ath3kBTInjector;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F83335AE24E42786002A0A08 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F83335B624E42786002A0A08 /* Ath3kBT.hpp in Headers */,
+				F83335D524E428C1002A0A08 /* LinuxTypes.h in Headers */,
+				F83335DB24E42C42002A0A08 /* AtherosFWService.hpp in Headers */,
+				F83335D724E429F3002A0A08 /* FwData.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F83335F224E43F90002A0A08 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F83335FA24E43F90002A0A08 /* Ath3kBTInjector.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXLegacyTarget section */
+		F83335DF24E43208002A0A08 /* ath3kfwgen */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-P ${PROJECT_DIR}/Ath3kBT/fw/*";
+			buildConfigurationList = F83335E024E43208002A0A08 /* Build configuration list for PBXLegacyTarget "ath3kfwgen" */;
+			buildPhases = (
+			);
+			buildToolPath = "$(PROJECT_DIR)/AthBluetoothFirmware/fw_gen.sh";
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = ath3kfwgen;
+			passBuildSettingsInEnvironment = 1;
+			productName = ath3kfwgen;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		F83335B224E42786002A0A08 /* Ath3kBT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F83335BA24E42786002A0A08 /* Build configuration list for PBXNativeTarget "Ath3kBT" */;
+			buildPhases = (
+				F83335AE24E42786002A0A08 /* Headers */,
+				F83335AF24E42786002A0A08 /* Sources */,
+				F83335B024E42786002A0A08 /* Frameworks */,
+				F83335B124E42786002A0A08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F83335E424E43221002A0A08 /* PBXTargetDependency */,
+			);
+			name = Ath3kBT;
+			productName = Ath3kBT;
+			productReference = F83335B324E42786002A0A08 /* Ath3kBT.kext */;
+			productType = "com.apple.product-type.kernel-extension";
+		};
+		F83335F624E43F90002A0A08 /* Ath3kBTInjector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F83335FE24E43F90002A0A08 /* Build configuration list for PBXNativeTarget "Ath3kBTInjector" */;
+			buildPhases = (
+				F83335F224E43F90002A0A08 /* Headers */,
+				F83335F324E43F90002A0A08 /* Sources */,
+				F83335F424E43F90002A0A08 /* Frameworks */,
+				F83335F524E43F90002A0A08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ath3kBTInjector;
+			productName = Ath3kBTInjector;
+			productReference = F83335F724E43F90002A0A08 /* Ath3kBTInjector.kext */;
+			productType = "com.apple.product-type.kernel-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F833359424E42617002A0A08 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = zxystd;
+				TargetAttributes = {
+					F83335B224E42786002A0A08 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					F83335DF24E43208002A0A08 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					F83335F624E43F90002A0A08 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = F833359724E42617002A0A08 /* Build configuration list for PBXProject "AthBluetoothFirmware" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F833359324E42617002A0A08;
+			productRefGroup = F833359E24E42617002A0A08 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F83335B224E42786002A0A08 /* Ath3kBT */,
+				F83335DF24E43208002A0A08 /* ath3kfwgen */,
+				F83335F624E43F90002A0A08 /* Ath3kBTInjector */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F83335B124E42786002A0A08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F83335F524E43F90002A0A08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F83335AF24E42786002A0A08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F83335F124E4375B002A0A08 /* FwBinary.cpp in Sources */,
+				F83335B824E42786002A0A08 /* Ath3kBT.cpp in Sources */,
+				F83335DA24E42C42002A0A08 /* AtherosFWService.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F83335F324E43F90002A0A08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F83335FC24E43F90002A0A08 /* Ath3kBTInjector.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F83335E424E43221002A0A08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F83335DF24E43208002A0A08 /* ath3kfwgen */;
+			targetProxy = F83335E324E43221002A0A08 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F83335A524E42617002A0A08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F83335A624E42617002A0A08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F83335BB24E42786002A0A08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Ath3kBT/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0.0;
+				MODULE_NAME = com.zxystd.Ath3kBT;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxystd.Ath3kBT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		F83335BC24E42786002A0A08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Ath3kBT/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0.0;
+				MODULE_NAME = com.zxystd.Ath3kBT;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxystd.Ath3kBT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Release;
+		};
+		F83335E124E43208002A0A08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F83335E224E43208002A0A08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F83335FF24E43F90002A0A08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Ath3kBTInjector/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0.0;
+				MODULE_NAME = com.zxystd.Ath3kBTInjector;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxystd.Ath3kBTInjector;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		F833360024E43F90002A0A08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Ath3kBTInjector/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0.0;
+				MODULE_NAME = com.zxystd.Ath3kBTInjector;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxystd.Ath3kBTInjector;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F833359724E42617002A0A08 /* Build configuration list for PBXProject "AthBluetoothFirmware" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F83335A524E42617002A0A08 /* Debug */,
+				F83335A624E42617002A0A08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F83335BA24E42786002A0A08 /* Build configuration list for PBXNativeTarget "Ath3kBT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F83335BB24E42786002A0A08 /* Debug */,
+				F83335BC24E42786002A0A08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F83335E024E43208002A0A08 /* Build configuration list for PBXLegacyTarget "ath3kfwgen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F83335E124E43208002A0A08 /* Debug */,
+				F83335E224E43208002A0A08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F83335FE24E43F90002A0A08 /* Build configuration list for PBXNativeTarget "Ath3kBTInjector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F83335FF24E43F90002A0A08 /* Debug */,
+				F833360024E43F90002A0A08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F833359424E42617002A0A08 /* Project object */;
+}

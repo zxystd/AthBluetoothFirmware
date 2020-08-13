@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+.DS_Store
+DerivedData
+build
+xcuserdata
+xcshareddata
+project.xcworkspace
+AthBluetoothFirmware/FwBinary.cpp
