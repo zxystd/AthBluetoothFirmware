@@ -20,13 +20,13 @@ OSDefineMetaClassAndStructors(Ath3kBT, AtherosFWService)
 
 bool Ath3kBT::init(OSDictionary *propTable)
 {
-    IOLog("%s::probe\n", __FUNCTION__);
+    IOLog("%s::probe\n", getName());
     return (super::init(propTable));
 }
 
 IOService* Ath3kBT::probe(IOService *provider, SInt32 *score)
 {
-    IOLog("%s::probe\n", __FUNCTION__);
+    IOLog("%s::probe\n", getName());
     super::probe(provider, score);
     return this;
 }
@@ -445,8 +445,8 @@ bool Ath3kBT::loadFwFile(OSData *fwData)
     
     char *buf = (char *)fwData->getBytesNoCopy();
     size = fwData->getLength();
-    buf += 20;
-    size -= 20;
+    buf += FW_HDR_SIZE;
+    size -= FW_HDR_SIZE;
     int ii = 1;
     while (size) {
         int to_send = size < BULK_SIZE ? size : BULK_SIZE;
