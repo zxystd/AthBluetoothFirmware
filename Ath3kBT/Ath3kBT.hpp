@@ -33,6 +33,8 @@ struct ath3k_version {
     __u8    reserved[7];
 } __packed;
 
+#define DRV_NAME    "Ath3kBT"
+
 class Ath3kBT : public AtherosFWService {
     OSDeclareDefaultStructors(Ath3kBT)
     
