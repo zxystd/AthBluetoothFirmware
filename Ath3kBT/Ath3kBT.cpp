@@ -20,7 +20,7 @@ OSDefineMetaClassAndStructors(Ath3kBT, AtherosFWService)
 
 bool Ath3kBT::init(OSDictionary *propTable)
 {
-    IOLog("%s::probe\n", DRV_NAME);
+    IOLog("%s::init\n", DRV_NAME);
     return (super::init(propTable));
 }
 
