@@ -38,8 +38,7 @@ bool Ath3kBT::start(IOService *provider)
     
     IOLog("%s::start!\n", DRV_NAME);
     m_pUsbDevice = OSDynamicCast(IOUSBHostDevice, provider);
-    if(!m_pUsbDevice)
-    {
+    if(!m_pUsbDevice) {
         IOLog("%s::start - Provider isn't a USB device!!!\n", DRV_NAME);
         return false;
     }
@@ -49,34 +48,28 @@ bool Ath3kBT::start(IOService *provider)
         IOLog("%s::start - failed to reset the device\n", DRV_NAME);
         return false;
     }
-    else {
-        IOLog("%s::start: device reset\n", DRV_NAME);
-    }
+    IOLog("%s::start: device reset done\n", DRV_NAME);
     
     int numconf = 0;
-    if ((numconf = m_pUsbDevice->getDeviceDescriptor()->bNumConfigurations) < 1)
-    {
+    if ((numconf = m_pUsbDevice->getDeviceDescriptor()->bNumConfigurations) < 1) {
         IOLog("%s::start - no composite configurations\n", DRV_NAME);
         return false;
     }
     IOLog("%s::start: num configurations %d\n", DRV_NAME, numconf);
         
     cd = m_pUsbDevice->getConfigurationDescriptor(0);
-    if (!cd)
-    {
+    if (!cd) {
         IOLog("%s::start - no config descriptor\n", DRV_NAME);
         return false;
     }
     
-    if (!m_pUsbDevice->open(this))
-    {
+    if (!m_pUsbDevice->open(this)) {
         IOLog("%s::start - unable to open device for configuration\n", DRV_NAME);
         return false;
     }
     
     err = m_pUsbDevice->setConfiguration(cd->bConfigurationValue, true);
-    if (err)
-    {
+    if (err) {
         IOLog("%s::start - unable to set the configuration\n", DRV_NAME);
         m_pUsbDevice->close(this);
         return false;
@@ -84,8 +77,7 @@ bool Ath3kBT::start(IOService *provider)
     
     USBStatus status;
     err = getDeviceStatus(this, &status);
-    if (err)
-    {
+    if (err) {
         IOLog("%s::start - unable to get device status\n", DRV_NAME);
         m_pUsbDevice->close(this);
         return false;
@@ -97,14 +89,10 @@ bool Ath3kBT::start(IOService *provider)
     if (!iterator)
         return false;
     
-    while (OSObject* candidate = iterator->getNextObject())
-    {
-        if (IOUSBHostInterface* interface = OSDynamicCast(IOUSBHostInterface, candidate))
-        {
-            {
-                intf = interface;
-                break;
-            }
+    while (OSObject* candidate = iterator->getNextObject()) {
+        if (IOUSBHostInterface* interface = OSDynamicCast(IOUSBHostInterface, candidate)) {
+            intf = interface;
+            break;
         }
     }
     
@@ -115,8 +103,7 @@ bool Ath3kBT::start(IOService *provider)
         return false;
     }
 
-    if (!intf->open(this))
-    {
+    if (!intf->open(this)) {
         IOLog("%s::start - unable to open interface\n", DRV_NAME);
         m_pUsbDevice->close(this);
         return false;
@@ -216,11 +203,9 @@ void Ath3kBT::handleClose(IOService *forClient, IOOptionBits options )
 IOReturn Ath3kBT::message(UInt32 type, IOService *provider, void *argument)
 {
     IOLog("%s::message\n", DRV_NAME);
-    switch ( type )
-    {
+    switch ( type ) {
         case kIOMessageServiceIsTerminated:
-            if (m_pUsbDevice != NULL && m_pUsbDevice->isOpen(this))
-            {
+            if (m_pUsbDevice != NULL && m_pUsbDevice->isOpen(this)) {
                 IOLog("%s::message - service is terminated - closing device\n", DRV_NAME);
             }
             break;
