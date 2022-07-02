@@ -202,7 +202,7 @@ void Ath3kBT::handleClose(IOService *forClient, IOOptionBits options )
 
 IOReturn Ath3kBT::message(UInt32 type, IOService *provider, void *argument)
 {
-    IOLog("%s::message\n", DRV_NAME);
+    IOLog("%s::message type: %d\n", DRV_NAME, type);
     switch ( type ) {
         case kIOMessageServiceIsTerminated:
             if (m_pUsbDevice != NULL && m_pUsbDevice->isOpen(this)) {
